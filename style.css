@@ -1,0 +1,114 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select {
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img,
+video {
+    height: auto;
+    max-width: 100%;
+}
+
+iframe {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+/* -------------------------------------- */
+
+.block {
+    border: 1px solid red;
+}
+
+.markdown-body {
+    & ul {
+        list-style: initial;
+    }
+}
+
+.doc-container {
+    position: relative;
+}
+
+.toolbar-mount-point {
+    position: absolute;
+    left: -80px;
+    top: 0;
+    transition: 50ms ease-out;
+    z-index: 1;
+
+    .toolbar {
+        border: 1px solid #ccc;
+        padding: 0 5px;
+        background-color: #fff;
+        border-radius: 4px;
+        user-select: none;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #ccc;
+        }
+    }
+}
