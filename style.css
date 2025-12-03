@@ -80,6 +80,12 @@ th {
 
 .block {
     border: 1px solid red;
+
+    &.selected {
+        border-color: #2f54eb;
+        background: #e6f7ff;
+        box-shadow: 0 0 0 2px rgba(47, 84, 235, 0.3);
+    }
 }
 
 .markdown-body {
@@ -93,8 +99,8 @@ th {
 }
 
 .toolbar-mount-point {
-    position: absolute;
-    left: -80px;
+    position: fixed;
+    left: 0;
     top: 0;
     transition: 50ms ease-out;
     z-index: 1;
@@ -111,4 +117,18 @@ th {
             background-color: #ccc;
         }
     }
+}
+
+.textEditBoxContainer {
+    position: absolute;
+    background-color: green;
+}
+
+/* 框选层样式：fixed定位（不受父元素影响）、半透明 */
+.selection-box {
+    position: fixed;
+    background: rgba(47, 84, 235, 0.2);
+    border: 1px solid #2f54eb;
+    pointer-events: none; /* 穿透点击，不影响下方元素 */
+    z-index: 9999; /* 确保在最上层 */
 }

@@ -16,7 +16,7 @@ export default defineComponent({
     return () => {
       // console.log(1, text.value);
       return (
-        <div style="width: 80%; margin: 0 auto;">
+        <div>
           <MarkdownRender content={text.value} />
         </div>
       );
