@@ -1,5 +1,6 @@
 import { defineComponent, ref, onMounted } from "vue";
-import MarkdownRender from "./MarkdownRender";
+// import MarkdownRender from "./MarkdownRender";
+import MarkdownRenderNg from "./MarkdownRenderNg.vue";
 
 export default defineComponent({
   setup() {
@@ -17,7 +18,7 @@ export default defineComponent({
       // console.log(1, text.value);
       return (
         <div>
-          <MarkdownRender content={text.value} />
+          <MarkdownRenderNg content={text.value} />
         </div>
       );
     };

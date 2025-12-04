@@ -22,8 +22,8 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -32,103 +32,108 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: 100%;
-    font-weight: normal;
+  font-size: 100%;
+  font-weight: normal;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 button,
 input,
 select {
-    margin: 0;
+  margin: 0;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 img,
 video {
-    height: auto;
-    max-width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 iframe {
-    border: 0;
+  border: 0;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 td,
 th {
-    padding: 0;
+  padding: 0;
 }
 
 /* -------------------------------------- */
 
 .block {
-    border: 1px solid red;
+  border: 1px solid transparent;
+  border-radius: 4px;
 
-    &.selected {
-        border-color: #2f54eb;
-        background: #e6f7ff;
-        box-shadow: 0 0 0 2px rgba(47, 84, 235, 0.3);
-    }
+  &.selected {
+    border-color: #2f54eb;
+    background: #e6f7ff;
+
+    /* box-shadow: 0 0 0 2px rgba(47, 84, 235, 0.3); */
+  }
 }
 
 .markdown-body {
-    & ul {
-        list-style: initial;
-    }
+  & ul {
+    list-style: initial;
+  }
 }
 
 .doc-container {
-    position: relative;
+  position: relative;
 }
 
 .toolbar-mount-point {
-    position: fixed;
-    left: 0;
-    top: 0;
-    transition: 50ms ease-out;
-    z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 50ms ease-out;
+  z-index: 1;
 
-    .toolbar {
-        border: 1px solid #ccc;
-        padding: 0 5px;
-        background-color: #fff;
-        border-radius: 4px;
-        user-select: none;
+  .toolbar {
+    border: 1px solid #ccc;
+    padding: 0 5px;
+    background-color: #fff;
+    border-radius: 4px;
+    user-select: none;
 
-        &:hover {
-            cursor: pointer;
-            background-color: #ccc;
-        }
+    &:hover {
+      cursor: pointer;
+      background-color: #ccc;
     }
+  }
 }
 
+
+
+
 .textEditBoxContainer {
-    position: absolute;
-    background-color: green;
+  position: absolute;
+  background-color: green;
 }
 
 /* 框选层样式：fixed定位（不受父元素影响）、半透明 */
 .selection-box {
-    position: fixed;
-    background: rgba(47, 84, 235, 0.2);
-    border: 1px solid #2f54eb;
-    pointer-events: none; /* 穿透点击，不影响下方元素 */
-    z-index: 9999; /* 确保在最上层 */
+  position: fixed;
+  background: rgba(47, 84, 235, 0.2);
+  border: 1px solid #2f54eb;
+  pointer-events: none; /* 穿透点击，不影响下方元素 */
+  z-index: 9999; /* 确保在最上层 */
 }
