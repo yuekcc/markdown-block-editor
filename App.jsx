@@ -1,13 +1,12 @@
 import { defineComponent, ref, onMounted } from "vue";
-// import MarkdownRender from "./MarkdownRender";
-import MarkdownRenderNg from "./MarkdownRenderNg.vue";
+import MarkdownRenderNg from "./MarkdownRenderNg";
 
 export default defineComponent({
   setup() {
     const text = ref("");
 
     async function loadData() {
-      return fetch("/public/sample.md").then((res) => res.text());
+      return fetch("/public/sample1.md").then((res) => res.text());
     }
 
     onMounted(async () => {
